@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #4a148c;
+    --secondary-color: #880e4f;
+    --background-color: #e0f2f7;
+    --text-color: #333;
+    --hover-shadow: rgba(0, 0, 0, 0.2);
+    --button-color: #4a148c; /* Cor do botão */
+    --button-hover-color: #880e4f; /* Cor do botão ao passar o mouse */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Uma fonte moderna e elegante */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--background-color), #b2ebf2); /* Gradiente de fundo sutil */
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradiente vibrante para o cabeçalho */
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0; /* Alterado para rem */
+    margin-bottom: 3rem; /* Alterado para rem */
+    box-shadow: 0 6px 12px var(--hover-shadow);
+}
+
+header h1 {
+    font-size: 4rem; /* Aumentado de 3rem para 4rem */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.topico {
+    background-color: #fff;
+    padding: 3rem; /* Alterado para rem */
+    margin-bottom: 3rem; /* Alterado para rem */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--hover-shadow); /* Sombra mais suave ao passar o mouse */
+}
+
+.topico h2 {
+    color: var(--primary-color);
+    font-size: 2.64rem; /* Aumentado de 2.2rem para 2.64rem */
+    font-weight: 600;
+    margin-bottom: 1.5rem; /* Alterado para rem */
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 0.8rem; /* Alterado para rem */
+}
+
+.topico p {
+    font-size: 1.44rem; /* Aumentado de 1.2rem para 1.44rem */
+    color: #555;
+    margin-bottom: 2rem; /* Alterado para rem */
+}
+
+.topico ul {
+    font-size: 1.73rem; /* Aumentado de 1.44rem para 1.73rem para os itens da lista */
+    color: #555;
+    margin-bottom: 2rem; /* Alterado para rem */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Aumentar o efeito de zoom */
+}
+
+/* Estilo do botão */
+.button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 1rem 2rem; /* Espaçamento do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.button:hover {
+    background-color: var(--button-hover-color); /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilos adicionais para responsividade */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .topico {
+        padding: 2rem; /* Alterado para rem */
+    }
+
+    .topico h2 {
+        font-size: 1.8rem; /* Alterado para rem */
+    }
+
+    .topico p {
+        font-size: 1.1rem; /* Alterado para rem */
+    }
+
+    .image-gallery img {
+        flex: 1 1 calc(50% - 1rem); /* Duas imagens por linha em telas menores */
+    }
+}
